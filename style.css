@@ -1,0 +1,328 @@
+
+:root {
+  --paper: #f3f0e7;
+  --white: #faf8f1;
+  --ink: #292720;
+  --muted: #716c60;
+  --rule: #c4beaf;
+  --green: #315b3a;
+  --link: #0000ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 0 30px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+
+header {
+  padding: 28px 10px 20px;
+  text-align: center;
+  border-bottom: 3px double var(--rule);
+}
+
+.eyebrow,
+.section-label,
+.year,
+.meta,
+.date,
+footer,
+.sidebar-box h3,
+.construction,
+nav {
+  font-family: "Courier New", monospace;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: normal;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.ornament {
+  margin-top: 14px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 34px;
+  padding: 28px 0 40px;
+}
+
+aside {
+  font-size: 13px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px;
+  background: #f1eee5;
+  border: 1px solid var(--rule);
+}
+
+nav h2 {
+  margin: 0 0 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted var(--rule);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 2px;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #b00000;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-box {
+  margin-top: 20px;
+  padding: 0 3px;
+}
+
+.sidebar-box h3 {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar-box a {
+  display: block;
+  margin: 4px 0;
+}
+
+.construction {
+  margin-top: 25px;
+  padding: 10px 5px;
+  border: 1px dashed var(--rule);
+  color: var(--green);
+  text-align: center;
+  font-size: 10px;
+}
+
+.construction strong,
+.construction small {
+  display: block;
+}
+
+.construction strong {
+  margin: 4px 0;
+  font-size: 11px;
+}
+
+.construction small {
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+main {
+  min-width: 0;
+}
+
+section {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px dotted var(--rule);
+  scroll-margin-top: 20px;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.section-label {
+  margin: 0 0 4px;
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+section h2 {
+  margin: 0 0 13px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+section h3 {
+  font-size: 16px;
+}
+
+.document {
+  margin: 20px 0;
+  padding-left: 13px;
+  border-left: 2px solid var(--rule);
+}
+
+.year {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .5px;
+}
+
+.document h3 {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.document p {
+  margin: 3px 0 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.document a {
+  font-size: 13px;
+}
+
+.motto {
+  margin: 18px 0;
+  color: var(--green);
+  font-size: 17px;
+  font-style: italic;
+}
+
+.entry {
+  margin: 20px 0;
+}
+
+.entry h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.meta,
+.date {
+  margin: 3px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.entry ul {
+  padding-left: 20px;
+}
+
+.entry li {
+  margin: 4px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 13px 0 17px;
+  border-top: 3px double var(--rule);
+  color: var(--muted);
+  font-size: 10px;
+}
+
+footer a {
+  font-family: Georgia, serif;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .page {
+    width: calc(100% - 16px);
+    margin: 8px auto;
+    padding: 0 16px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav h2 {
+    grid-column: 1 / -1;
+  }
+
+  .sidebar-box {
+    margin-top: 13px;
+  }
+
+  .construction {
+    max-width: 230px;
+  }
+}
+
+@media print {
+  body,
+  .page {
+    background: white;
+  }
+
+  .page {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .content {
+    display: block;
+  }
+
+  aside {
+    display: none;
+  }
+}
