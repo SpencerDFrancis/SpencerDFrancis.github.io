@@ -1,12 +1,14 @@
 
 :root {
-  --paper: #f3f0e7;
-  --white: #faf8f1;
-  --ink: #292720;
-  --muted: #716c60;
-  --rule: #c4beaf;
-  --green: #315b3a;
-  --link: #0000ee;
+  --paper: #dfe5eb;
+  --white: #f5f7fa;
+  --ink: #171b22;
+  --muted: #535e6b;
+  --rule: #8997a6;
+  --panel: #e8edf2;
+  --link: #0000cc;
+  --visited: #551a8b;
+  --accent: #263f59;
 }
 
 * {
@@ -21,23 +23,23 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
-  line-height: 1.6;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .page {
   max-width: 1000px;
-  margin: 28px auto;
-  padding: 0 30px;
+  margin: 24px auto;
+  padding: 0 28px;
   background: var(--white);
   border: 1px solid var(--rule);
 }
 
 header {
-  padding: 28px 10px 20px;
+  padding: 25px 10px 18px;
   text-align: center;
-  border-bottom: 3px double var(--rule);
+  border-bottom: 2px solid var(--ink);
 }
 
 .eyebrow,
@@ -49,31 +51,34 @@ footer,
 .sidebar-box h3,
 .construction,
 nav {
-  font-family: "Courier New", monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .eyebrow {
   color: var(--muted);
   font-size: 11px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 h1 {
   margin: 5px 0;
-  font-size: clamp(32px, 5vw, 46px);
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(34px, 5vw, 48px);
   font-weight: normal;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
 }
 
 .subtitle {
   margin: 0;
   color: var(--muted);
-  font-style: italic;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
 }
 
 .ornament {
-  margin-top: 14px;
-  color: var(--green);
+  margin-top: 12px;
+  color: var(--accent);
+  font-family: "Courier New", monospace;
   font-size: 12px;
 }
 
@@ -81,7 +86,7 @@ h1 {
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr);
   gap: 34px;
-  padding: 28px 0 40px;
+  padding: 26px 0 38px;
 }
 
 aside {
@@ -91,32 +96,33 @@ aside {
 nav {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   padding: 12px;
-  background: #f1eee5;
+  background: var(--panel);
   border: 1px solid var(--rule);
 }
 
 nav h2 {
-  margin: 0 0 6px;
-  padding-bottom: 8px;
-  border-bottom: 1px dotted var(--rule);
-  font-family: Georgia, serif;
-  font-size: 17px;
-  font-weight: normal;
+  margin: 0 0 7px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--rule);
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 a {
   color: var(--link);
+  text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 a:visited {
-  color: #551a8b;
+  color: var(--visited);
 }
 
 a:hover {
-  color: #b00000;
+  color: #d00000;
 }
 
 nav a {
@@ -129,14 +135,16 @@ nav a:hover {
 
 .sidebar-box {
   margin-top: 20px;
-  padding: 0 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
 }
 
 .sidebar-box h3 {
-  margin: 0 0 6px;
-  color: var(--muted);
+  margin: 0 0 7px;
+  color: var(--ink);
   font-size: 11px;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   text-transform: uppercase;
 }
 
@@ -146,10 +154,11 @@ nav a:hover {
 }
 
 .construction {
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 10px 5px;
-  border: 1px dashed var(--rule);
-  color: var(--green);
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--accent);
   text-align: center;
   font-size: 10px;
 }
@@ -166,8 +175,7 @@ nav a:hover {
 
 .construction small {
   color: var(--muted);
-  font-family: Georgia, serif;
-  font-style: italic;
+  font-family: "Courier New", monospace;
 }
 
 main {
@@ -175,9 +183,9 @@ main {
 }
 
 section {
-  margin-bottom: 30px;
-  padding-bottom: 25px;
-  border-bottom: 1px dotted var(--rule);
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
   scroll-margin-top: 20px;
 }
 
@@ -187,14 +195,15 @@ section:last-child {
 
 .section-label {
   margin: 0 0 4px;
-  color: var(--green);
+  color: var(--accent);
   font-size: 11px;
-  letter-spacing: 1px;
+  font-weight: bold;
+  letter-spacing: .5px;
 }
 
 section h2 {
-  margin: 0 0 13px;
-  font-size: 25px;
+  margin: 0 0 12px;
+  font-size: 26px;
   font-weight: normal;
 }
 
@@ -203,15 +212,15 @@ section h3 {
 }
 
 .document {
-  margin: 20px 0;
-  padding-left: 13px;
-  border-left: 2px solid var(--rule);
+  margin: 19px 0;
+  padding: 0 0 0 12px;
+  border-left: 3px solid var(--accent);
 }
 
 .year {
   color: var(--muted);
   font-size: 10px;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
 }
 
 .document h3 {
@@ -226,14 +235,17 @@ section h3 {
 }
 
 .document a {
-  font-size: 13px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
 }
 
 .motto {
   margin: 18px 0;
-  color: var(--green);
-  font-size: 17px;
-  font-style: italic;
+  padding: 9px 12px;
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  font-family: "Courier New", monospace;
+  font-size: 13px;
 }
 
 .entry {
@@ -242,7 +254,7 @@ section h3 {
 
 .entry h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .meta,
@@ -265,15 +277,15 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 13px 0 17px;
-  border-top: 3px double var(--rule);
+  padding: 13px 0 16px;
+  border-top: 2px solid var(--ink);
   color: var(--muted);
   font-size: 10px;
 }
 
 footer a {
-  font-family: Georgia, serif;
-  font-size: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
 }
 
 @media (max-width: 700px) {
@@ -285,7 +297,7 @@ footer a {
 
   .content {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
   }
 
   nav {
@@ -298,7 +310,7 @@ footer a {
   }
 
   .sidebar-box {
-    margin-top: 13px;
+    margin-top: 12px;
   }
 
   .construction {
